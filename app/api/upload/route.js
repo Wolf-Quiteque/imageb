@@ -78,10 +78,3 @@ export async function POST(request) {
         );
     }
 }
-
-// Disable body parser for file uploads
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
