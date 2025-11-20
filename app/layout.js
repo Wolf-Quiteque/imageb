@@ -121,7 +121,7 @@ export default function RootLayout({ children }) {
         Header Area
     ==============================*/}
         <header className="nav-header header-layout1">
-          <div className="header-top">
+          <div className="header-top d-none d-md-block">
             <div className="container-fluid">
               <div className="row justify-content-center justify-content-lg-between align-items-center gy-2">
                 <div className="col-auto d-none d-lg-block">
@@ -341,7 +341,6 @@ export default function RootLayout({ children }) {
         {/* Main Js File - Load after all dependencies */}
         <Script
           src="/assets/js/main.js"
-          strategy="lazyOnload"
         />
       </body>
 

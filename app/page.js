@@ -13,7 +13,7 @@ export default function Home() {
     ============================== */}
             <div className="hero-wrapper hero-1" id="hero">
                 <div className="global-carousel" id="heroSlider1" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
-                    data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false" data-autoplay-speed="3000">
+                    data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false" data-autoplay-speed="3000" data-infinite="true">
                     <div className="hero-slider" data-bg-src="/assets/img/hero/hero_bg_1_1.png">
                         <div className="hero-shape1_1 shape-mockup movingX" data-bottom="0" data-left="0">
                             <img src="/assets/img/hero/hero_shape_1_1.png" alt="img" />
