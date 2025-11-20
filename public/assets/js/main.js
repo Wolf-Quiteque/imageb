@@ -37,8 +37,19 @@
 
   /*---------- 01. On Load Function ----------*/
     $(window).on("load", function () {
-        $(".preloader").fadeOut();
+        $(".preloader").fadeOut(800, function() {
+            $(this).remove();
+        });
     });
+
+    // Failsafe: Remove preloader after 5 seconds if still visible
+    setTimeout(function() {
+        if ($(".preloader").is(":visible")) {
+            $(".preloader").fadeOut(800, function() {
+                $(this).remove();
+            });
+        }
+    }, 5000);
 
     $(window).on('resize', function () {
         $(".slick-slider").slick("refresh");
@@ -49,7 +60,9 @@
         $(".preloaderCls").each(function () {
             $(this).on("click", function (e) {
                 e.preventDefault();
-                $(".preloader").css("display", "none");
+                $(".preloader").fadeOut(800, function() {
+                    $(this).remove();
+                });
             });
         });
     }
@@ -299,6 +312,12 @@
     /*----------- 07. Global Slider ----------*/
     $(".global-carousel").each(function () {
         var carouselSlide = $(this);
+
+        // Check if slick is available
+        if (typeof $.fn.slick === 'undefined') {
+            console.error('Slick carousel is not loaded');
+            return;
+        }
 
         // Collect Data
         function d(data) {

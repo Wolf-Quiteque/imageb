@@ -52,12 +52,22 @@ export default function RootLayout({ children }) {
         {/*==============================
         Preloader
     ==============================*/}
-        {/* <div className="preloader ">
+        <div className="preloader">
           <div className="preloader-inner">
-            <img src="/assets/img/logo-white.svg" alt="ovation" />
-            <span className="loader"></span>
+            <div className="camera-shutter">
+              <div className="shutter-blade"></div>
+              <div className="shutter-blade"></div>
+              <div className="shutter-blade"></div>
+              <div className="shutter-blade"></div>
+              <div className="shutter-blade"></div>
+              <div className="shutter-blade"></div>
+            </div>
+            <div className="preloader-text">
+              <h2 className="preloader-title">ImageryByB</h2>
+              <p className="preloader-tagline">Capturing Your Love Story</p>
+            </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="sidemenu-wrapper">
           <div className="sidemenu-content">
@@ -70,8 +80,6 @@ export default function RootLayout({ children }) {
                 <p className="about-text">At ImageryByB, we capture love and meaningful moments for those who want to feel something every time they look back.</p>
                 <div className="social-btn style2">
                   <a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a>
-                  <a href="https://twitter.com/"><i className="fab fa-twitter"></i></a>
-                  <a href="https://pinterest.com/"><i className="fab fa-pinterest-p"></i></a>
                   <a href="https://instagram.com/"><i className="fab fa-instagram"></i></a>
                 </div>
               </div>
@@ -95,7 +103,7 @@ export default function RootLayout({ children }) {
           <div className="mobile-menu-area text-center">
             <button className="menu-toggle"><i className="fas fa-times"></i></button>
             <div className="mobile-logo">
-              <a href="index.html"><img src="/assets/img/imageryb2b-logo.webp" alt="Ovation" /></a>
+              <a href="index.html"><img src="/assets/img/imageryb2b-logo-white.webp" alt="Ovation" /></a>
             </div>
             <div className="mobile-menu">
               <ul>
@@ -138,8 +146,6 @@ export default function RootLayout({ children }) {
                         <div className="social-links">
                           <span className="me-2">Visit Us:</span>
                           <a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a>
-                          <a href="https://www.twitter.com/"><i className="fab fa-twitter"></i></a>
-                          <a href="https://www.linkedin.com/"><i className="fab fa-linkedin-in"></i></a>
                           <a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a>
                         </div>
                       </li>
@@ -214,9 +220,7 @@ export default function RootLayout({ children }) {
                 <div className="col-sm-auto">
                   <div className="social-btn style2">
                     <a href="https://facebook.com/"><i className="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/"><i className="fab fa-twitter"></i></a>
-                    <a href="https://behance.com/"><i className="fab fa-behance"></i></a>
-                    <a href="https://www.youtube.com/"><i className="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com/"><i className="fab fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
@@ -311,31 +315,34 @@ export default function RootLayout({ children }) {
         {/* Jquery */}
         <Script src="/assets/js/vendor/jquery-3.6.0.min.js" strategy="beforeInteractive" />
         {/* Slick Slider */}
-        <Script src="/assets/js/slick.min.js" />
+        <Script src="/assets/js/slick.min.js" strategy="afterInteractive" />
         {/* Bootstrap */}
-        <Script src="/assets/js/bootstrap.min.js" />
+        <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
         {/* Magnific Popup */}
-        <Script src="/assets/js/jquery.magnific-popup.min.js" />
+        <Script src="/assets/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
         {/* Counter Up */}
-        <Script src="/assets/js/jquery.counterup.min.js" />
+        <Script src="/assets/js/jquery.counterup.min.js" strategy="afterInteractive" />
         {/* Range Slider */}
-        <Script src="/assets/js/jquery-ui.min.js" />
+        <Script src="/assets/js/jquery-ui.min.js" strategy="afterInteractive" />
         {/* odometer */}
-        <Script src="/assets/js/odometer.min.js" />
-        <Script src="/assets/js/viewport.jquery.js" />
+        <Script src="/assets/js/odometer.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/viewport.jquery.js" strategy="afterInteractive" />
 
 
         {/* Isotope Filter */}
-        <Script src="/assets/js/imagesloaded.pkgd.min.js" />
-        <Script src="/assets/js/isotope.pkgd.min.js" />
+        <Script src="/assets/js/imagesloaded.pkgd.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/isotope.pkgd.min.js" strategy="afterInteractive" />
         {/* gsap */}
-        <Script src="/assets/js/gsap.min.js" />
-        <Script src="/assets/js/ScrollSmoother.min.js" />
-        <Script src="/assets/js/ScrollTrigger.min.js" />
-        <Script src="/assets/js/SplitText.min.js" />
+        <Script src="/assets/js/gsap.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ScrollSmoother.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ScrollTrigger.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/SplitText.min.js" strategy="afterInteractive" />
 
-        {/* Main Js File */}
-        <Script src="/assets/js/main.js" />
+        {/* Main Js File - Load after all dependencies */}
+          <Script
+            src="/assets/js/main.js"
+            strategy="lazyOnload"
+          />
       </body>
 
 

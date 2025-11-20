@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import VideoModal from "./components/VideoModal";
+import GallerySlider from "./components/GallerySlider";
 
 export default function Home() {
     return (
@@ -10,7 +12,7 @@ export default function Home() {
     ============================== */}
             <div className="hero-wrapper hero-1" id="hero">
                 <div className="global-carousel" id="heroSlider1" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
-                    data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false">
+                    data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false" data-autoplay-speed="3000">
                     <div className="hero-slider" data-bg-src="/assets/img/hero/hero_bg_1_1.png">
                         <div className="hero-shape1_1 shape-mockup movingX" data-bottom="0" data-left="0">
                             <img src="/assets/img/hero/hero_shape_1_1.png" alt="img" />
@@ -23,12 +25,12 @@ export default function Home() {
 
                                 <div className="col-lg-6 col-md-12">
                                     <div className="hero-style1">
-                                        <span className="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">Based in Houston, Texas</span>
-                                        <span className="hero-subtitle2" data-ani="slideindown" data-ani-delay="0.4s">Meaningful moments for those who want to feel something.</span>
-                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">IMAGERY BY B</h1>
-                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">CAPTURING LOVE</h1>
+                                        <span className="hero-subtitle d-none d-md-block" data-ani="slideindown" data-ani-delay="0.5s">Your Love Story Deserves</span>
+                                        <span className="hero-subtitle2 d-none d-md-block" data-ani="slideindown" data-ani-delay="0.4s">Every stolen glance, every joyful tear, every promise whispered.</span>
+                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">WEDDING DAY</h1>
+                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">MAGIC</h1>
                                         <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="contact.html" className="btn style2">REACH OUT</a>
+                                            <a href="contact.html" className="btn style2">BOOK YOUR DATE</a>
                                         </div>
                                     </div>
                                 </div>
@@ -53,12 +55,12 @@ export default function Home() {
 
                                 <div className="col-lg-6 col-md-12">
                                     <div className="hero-style1">
-                                        <span className="hero-subtitle" data-ani="slideindown" data-ani-delay="0.5s">Based in Houston, Texas</span>
-                                        <span className="hero-subtitle2" data-ani="slideindown" data-ani-delay="0.4s">Meaningful moments for those who want to feel something.</span>
-                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">IMAGERY BY B</h1>
-                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">CAPTURING LOVE</h1>
+                                        <span className="hero-subtitle d-none d-md-block" data-ani="slideindown" data-ani-delay="0.5s">Celebrate Your Forever</span>
+                                        <span className="hero-subtitle2 d-none d-md-block" data-ani="slideindown" data-ani-delay="0.4s">The way you laugh together, hold each other, love each other—captured beautifully.</span>
+                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">TOGETHER FOREVER</h1>
+                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">SESSIONS</h1>
                                         <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="contact.html" className="btn style2">REACH OUT</a>
+                                            <a href="contact.html" className="btn style2">START YOUR STORY</a>
                                         </div>
                                     </div>
                                 </div>
@@ -176,12 +178,9 @@ export default function Home() {
                                     <img src="/assets/img/normal/video-shape_1-1.png" alt="img" />
                                 </div>
                                 <div className="img-anim">
-                                    <img src="/assets/img/normal/video_1-1.png" alt="img" />
+                                    <img src="/assets/img/normal/video_1-1.webp" alt="img" />
                                 </div>
-                                <a href="https://www.youtube.com/watch?v=yfFYBo0jtF0"
-                                    className="play-btn popup-video background-image">
-                                    <i className="fas fa-solid fa-play"></i>
-                                </a>
+                                <VideoModal />
                             </div>
                         </div>
                     </div>
@@ -287,12 +286,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="row gy-30 masonary-active">
-                        <div className="col-lg-7 filter-item">
+                        <div className="col-md-6 filter-item">
                             <div className="portfolio-thumb fade_left">
-                                <a className="popup-image icon-btn" href="/assets/img/portfolio/portfolio1_1.png"><i
+                                <a className="popup-image icon-btn" href="/assets/img/normal/byb.jpg"><i
                                     className="far fa-eye"></i></a>
                                 <div className="img-anim">
-                                    <img src="/assets/img/portfolio/portfolio1_1.png" alt="portfolio" />
+                                    <img src="/assets/img/normal/byb.jpg" alt="portfolio" />
                                 </div>
                                 <div className="portfolio-details">
                                     <p>ImageryByB</p>
@@ -300,137 +299,43 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-5 filter-item">
+
+                           <div className="col-md-6 filter-item">
                             <div className="portfolio-thumb fade_left">
-                                <a className="popup-image icon-btn" href="/assets/img/portfolio/portfolio1_2.png"><i
+                                <a className="popup-image icon-btn" href="/assets/img/portfolio/lopo.png"><i
                                     className="far fa-eye"></i></a>
                                 <div className="img-anim">
-                                    <img src="/assets/img/portfolio/portfolio1_2.png" alt="portfolio" />
+                                    <img src="/assets/img/portfolio/lopo.png" alt="portfolio" />
                                 </div>
-                                <div className="portfolio-details">
+                                 <div className="portfolio-details">
                                     <p>Couples + Engagement</p>
                                     <h3><a href="project-details.html">Together Forever Session</a></h3>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-5 filter-item">
-                            <div className="portfolio-thumb fade_left">
-                                <a className="popup-image icon-btn" href="/assets/img/portfolio/portfolio1_3.png"><i
-                                    className="far fa-eye"></i></a>
-                                <div className="img-anim">
-                                    <img src="/assets/img/portfolio/portfolio1_3.png" alt="portfolio" />
-                                </div>
-                                <div className="portfolio-details">
-                                    <p>ImageryByB</p>
-                                    <h3><a href="project-details.html">Engagement</a></h3>
-                                </div>
-                            </div>
-                        </div>
+                   
+                 
                     </div>
                 </div>
             </div>
 
             {/* ==============================
-    Product Area
+    Gallery Area
     ============================== */}
-            <div className="product-area-1 space overflow-hidden">
+            <div className="gallery-area-1 space overflow-hidden">
                 <div className="container">
                     <div className="title-area text-center title-anim">
                         <span className="sub-title style2">PRESERVE YOUR MEMORIES</span>
                         <h2 className="sec-title">Keepsakes & Prints</h2>
                     </div>
-                    <div className="row gy-4">
-                        <div className="col-lg-3 col-md-6">
-                            <div className="product-card title-anim">
-                                <div className="product-img">
-                                    <img src="/assets/img/product/1.png" alt="Product Image" />
-                                    <div className="actions">
-                                        <a href="contact.html" className="btn">Inquire</a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <span className="price">From $500</span>
-                                    <h3 className="product-title"><a href="shop-details.html">Heirloom Album</a></h3>
-                                    <div className="star-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <div className="product-card title-anim">
-                                <div className="product-img">
-                                    <img src="/assets/img/product/2.png" alt="Product Image" />
-                                    <div className="actions">
-                                        <a href="contact.html" className="btn">Inquire</a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <span className="price">From $200</span>
-                                    <h3 className="product-title"><a href="shop-details.html">Canvas Wall Art</a></h3>
-                                    <div className="star-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <div className="product-card title-anim">
-                                <div className="product-img">
-                                    <img src="/assets/img/product/3.png" alt="Product Image" />
-                                    <div className="actions">
-                                        <a href="contact.html" className="btn">Inquire</a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <span className="price">From $150</span>
-                                    <h3 className="product-title"><a href="shop-details.html">Framed Prints</a></h3>
-                                    <div className="star-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
-                            <div className="product-card title-anim">
-                                <div className="product-img">
-                                    <img src="/assets/img/product/4.png" alt="Product Image" />
-                                    <div className="actions">
-                                        <a href="contact.html" className="btn">Inquire</a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <span className="price">Included</span>
-                                    <h3 className="product-title"><a href="shop-details.html">Digital Gallery</a></h3>
-                                    <div className="star-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <GallerySlider />
                 </div>
             </div>
 
             {/* ==============================
         Contact Area
     ============================== */}
+    
             <div className="contact-area-1 space overflow-hidden" data-bg-src="/assets/img/bg/contact-1-bg.png">
                 <div className="contact-shape1_1 shape-mockup jump d-lg-block d-none" data-top="0%" data-right="-8%">
                     <img src="/assets/img/normal/contact-shape_1-1.png" alt="img" />
@@ -594,71 +499,7 @@ export default function Home() {
             {/* ==============================
     Blog Area
     ============================== */}
-            <section className="blog-area space">
-                <div className="container">
-                    <div className="title-area text-center title-anim">
-                        <span className="sub-title style2">Our Blog Posts
-                        </span>
-                        <h2 className="sec-title">Latest from our Journal</h2>
-                    </div>
-
-                    <div className="row flex-row-reverse">
-                        <div className="col-lg-4 mb-30 mb-lg-0">
-                            <div className="blog-grid style2 style-big">
-                                <div className="blog-img">
-                                    <img src="/assets/img/blog/blog_1_3.html" alt="blog image" />
-                                </div>
-                                <div className="blog-content">
-                                    <div className="post-meta-item blog-meta">
-                                        <a href="blog.html">15 JAN, 2023</a>
-                                        <a href="blog.html">BY HARSH ARKA</a>
-                                    </div>
-                                    <h3 className="blog-title"><a href="blog-details.html">Enthusiast&apos;s Handbook: From Manicures
-                                        to Nail Health</a></h3>
-                                    <a href="blog-details.html" className="link-btn style2">Continue Reading <i
-                                        className="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="blog-grid style2 style-small">
-                                <div>
-                                    <div className="blog-img">
-                                        <img src="/assets/img/blog/blog_1_1.html" alt="blog image" />
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <div className="post-meta-item blog-meta">
-                                        <a href="blog.html">15 JAN, 2023</a>
-                                        <a href="blog.html">BY HARSH ARKA</a>
-                                    </div>
-                                    <h3 className="blog-title"><a href="blog-details.html">Enthusiast&apos;s Handbook: From Manicures
-                                        to Nail Health</a></h3>
-                                    <a href="blog-details.html" className="link-btn style2">Continue Reading <i
-                                        className="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div className="blog-grid style2 style-small">
-                                <div>
-                                    <div className="blog-img">
-                                        <img src="/assets/img/blog/blog_1_2.html" alt="blog image" />
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <div className="post-meta-item blog-meta">
-                                        <a href="blog.html">15 JAN, 2023</a>
-                                        <a href="blog.html">BY HARSH ARKA</a>
-                                    </div>
-                                    <h3 className="blog-title"><a href="blog-details.html">Enthusiast&apos;s Handbook: From Manicures
-                                        to Nail Health</a></h3>
-                                    <a href="blog-details.html" className="link-btn style2">Continue Reading <i
-                                        className="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        
 
         </>
     );
