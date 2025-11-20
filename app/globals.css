@@ -63,6 +63,25 @@ a {
   color: #ffffff !important;
 }
 
+/* Sidebar social media icons - make them visible */
+.sidemenu-wrapper .sidemenu-content .social-btn a {
+  background-color: transparent !important;
+  border: 2px solid #d4af37 !important;
+}
+
+.sidemenu-wrapper .sidemenu-content .social-btn a i {
+  color: #d4af37 !important;
+}
+
+.sidemenu-wrapper .sidemenu-content .social-btn a:hover {
+  background-color: #d4af37 !important;
+  border-color: #d4af37 !important;
+}
+
+.sidemenu-wrapper .sidemenu-content .social-btn a:hover i {
+  color: #000000 !important;
+}
+
 /* Mobile menu text color - white for visibility on dark background */
 .mobile-menu-wrapper .mobile-menu-area,
 .mobile-menu-wrapper .mobile-menu-area * {
@@ -565,4 +584,36 @@ a {
   .gallery-slider {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==============================
+   Marquee Text Fix
+   ============================== */
+.marquee-wrap .marquee__group .m-item {
+  color: #000000 !important;
+}
+
+@media (max-width: 768px) {
+  .marquee-wrap .marquee__group .m-item {
+    color: #ffffff !important;
+  }
+}
+
+/* ==============================
+   Inquiry Form Select Dropdown Fix
+   ============================== */
+/* Style the select element itself (white text) */
+#inquiry select.form-control {
+  color: #ffffff !important;
+}
+
+/* Style the dropdown options (black text on white background) */
+#inquiry select.form-control option {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Keep the placeholder option white */
+#inquiry select.form-control option[value=""] {
+  color: #999999 !important;
 }

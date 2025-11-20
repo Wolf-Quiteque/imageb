@@ -46,6 +46,11 @@ export default function GallerySlider() {
                         </div>
                     ))}
                 </div>
+                <div className="text-center mt-4">
+                    <button onClick={() => openLightbox(0)} className="btn">
+                        Open Gallery
+                    </button>
+                </div>
             </div>
 
             {/* Lightbox Modal */}

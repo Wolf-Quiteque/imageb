@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import PageViewTracker from "./components/PageViewTracker";
 
 export default function RootLayout({ children }) {
   return (
@@ -87,11 +88,11 @@ export default function RootLayout({ children }) {
             <div className="widget widget_nav_menu footer-widget">
               <h3 className="widget_title">Quick Links</h3>
               <ul className="menu">
-                <li><a href="project-details.html">Together Forever Session</a></li>
-                <li><a href="blog.html">Magazine</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="reservation.html">Schedule</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#inquiry">Inquiry</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -107,11 +108,11 @@ export default function RootLayout({ children }) {
             </div>
             <div className="mobile-menu">
               <ul>
-                <li><a href="project-details.html">Together Forever Session</a></li>
-                <li><a href="blog.html">Magazine</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="reservation.html">Schedule</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#inquiry">Inquiry</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -137,9 +138,9 @@ export default function RootLayout({ children }) {
                     <ul>
                       <li className="d-none d-sm-block">
                         <ul className="header-sub-links">
-                          <li><a href="contact.html">Help</a></li>
-                          <li><a href="contact.html">Support</a></li>
-                          <li><a href="contact.html">Contact</a></li>
+                          <li><a href="#">Help</a></li>
+                          <li><a href="#">Support</a></li>
+                          <li><a href="#">Contact</a></li>
                         </ul>
                       </li>
                       <li>
@@ -168,11 +169,11 @@ export default function RootLayout({ children }) {
                   <div className="col-auto">
                     <nav className="main-menu d-none d-lg-inline-block">
                       <ul>
-                        <li><a href="project-details.html">Together Forever Session</a></li>
-                        <li><a href="blog.html">Magazine</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="reservation.html">Schedule</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#inquiry">Inquiry</a></li>
+                        <li><a href="#contact">Contact</a></li>
                       </ul>
                     </nav>
                     <div className="navbar-right d-inline-flex d-lg-none">
@@ -181,7 +182,7 @@ export default function RootLayout({ children }) {
                   </div>
                   <div className="col-auto d-none d-lg-block">
                     <div className="header-button">
-                      <a href="contact.html" className="btn d-none d-xl-block">
+                      <a href="#contact" className="btn d-none d-xl-block">
                         Inquire Now
                       </a>
                       <button type="button" className="sidebar-btn sideMenuToggler">
@@ -194,6 +195,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </header>
+        <PageViewTracker />
         {children}
 
 
@@ -204,7 +206,7 @@ export default function RootLayout({ children }) {
     ==============================*/}
         <footer className="footer-wrapper footer-layout1 overflow-hidden" data-bg-src="/assets/img/bg/footer-1-bg.html">
           <div className="shape-mockup footer1-shape1 jump" data-top="20%" data-left="-2%">
-            <img src="/assets/img/normal/footer-1-shape1.html" alt="img" />
+            <img src="/assets/img/normal/footer-1-shape1.webp" alt="img" />
           </div>
           <div className="shape-mockup footer1-shape2 jump-reverse" data-top="-10%" data-right="-10%">
             <img src="/assets/img/normal/footer-1-shape2.html" alt="img" />
@@ -244,13 +246,13 @@ export default function RootLayout({ children }) {
                     <h3 className="widget_title">Information</h3>
                     <div className="menu-all-pages-container list-column2">
                       <ul className="menu">
-                        <li><a href="project-details.html">Together Forever Session</a></li>
-                        <li><a href="blog.html">Magazine</a></li>
-                        <li><a href="about.html">About</a></li>
+
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
                       </ul>
                       <ul className="menu">
-                        <li><a href="reservation.html">Schedule</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#inquiry">Inquiry</a></li>
+                        <li><a href="#contact">Contact</a></li>
                       </ul>
                     </div>
                   </div>
@@ -271,20 +273,18 @@ export default function RootLayout({ children }) {
             </div>
             <div className="footer-menu-area">
               <ul className="footer-menu-list">
+
                 <li>
-                  <a href="project-details.html">TOGETHER FOREVER SESSION</a>
+                  <a href="#gallery">GALLERY</a>
                 </li>
                 <li>
-                  <a href="blog.html">MAGAZINE</a>
+                  <a href="#about">ABOUT</a>
                 </li>
                 <li>
-                  <a href="about.html">ABOUT</a>
+                  <a href="#inquiry">INQUIRY</a>
                 </li>
                 <li>
-                  <a href="reservation.html">SCHEDULE</a>
-                </li>
-                <li>
-                  <a href="contact.html">CONTACT</a>
+                  <a href="#contact">CONTACT</a>
                 </li>
               </ul>
             </div>
@@ -339,10 +339,10 @@ export default function RootLayout({ children }) {
         <Script src="/assets/js/SplitText.min.js" strategy="afterInteractive" />
 
         {/* Main Js File - Load after all dependencies */}
-          <Script
-            src="/assets/js/main.js"
-            strategy="lazyOnload"
-          />
+        <Script
+          src="/assets/js/main.js"
+          strategy="lazyOnload"
+        />
       </body>
 
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import VideoModal from "./components/VideoModal";
 import GallerySlider from "./components/GallerySlider";
+import InquiryForm from "./components/InquiryForm";
 
 export default function Home() {
     return (
@@ -30,7 +31,7 @@ export default function Home() {
                                         <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">WEDDING DAY</h1>
                                         <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">MAGIC</h1>
                                         <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="contact.html" className="btn style2">BOOK YOUR DATE</a>
+                                            <a href="#" className="btn style2">BOOK YOUR DATE</a>
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +61,7 @@ export default function Home() {
                                         <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">TOGETHER FOREVER</h1>
                                         <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">SESSIONS</h1>
                                         <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="contact.html" className="btn style2">START YOUR STORY</a>
+                                            <a href="#" className="btn style2">START YOUR STORY</a>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +80,7 @@ export default function Home() {
             {/* ==============================
     About Area
     ============================== */}
-            <div className="space">
+            <div className="space" id="about">
                 <div className="container">
                     <div className="row flex-row-reverse align-items-center justify-content-between">
                         <div className="col-lg-7 ">
@@ -96,7 +97,7 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className="btn-wrap mt-40">
-                                    <a href="contact.html" className="btn">REACH OUT</a>
+                                    <a href="#inquiry" className="btn">REACH OUT</a>
                                 </div>
                             </div>
                         </div>
@@ -287,6 +288,7 @@ export default function Home() {
                     </div>
                     <div className="row gy-30 masonary-active">
                         <div className="col-md-6 filter-item">
+                            <h3 className="service-title mb-3" style={{ fontSize: '1.5rem', fontWeight: '600' }}>Wedding Photography</h3>
                             <div className="portfolio-thumb fade_left">
                                 <a className="popup-image icon-btn" href="/assets/img/normal/byb.jpg"><i
                                     className="far fa-eye"></i></a>
@@ -295,26 +297,27 @@ export default function Home() {
                                 </div>
                                 <div className="portfolio-details">
                                     <p>ImageryByB</p>
-                                    <h3><a href="project-details.html">Wedding Photography</a></h3>
+                                    <h3><a href="#">Wedding Photography</a></h3>
                                 </div>
                             </div>
                         </div>
 
-                           <div className="col-md-6 filter-item">
+                        <div className="col-md-6 filter-item">
+                            <h3 className="service-title mb-3" style={{ fontSize: '1.5rem', fontWeight: '600' }}>Together Forever Session</h3>
                             <div className="portfolio-thumb fade_left">
                                 <a className="popup-image icon-btn" href="/assets/img/portfolio/lopo.png"><i
                                     className="far fa-eye"></i></a>
                                 <div className="img-anim">
                                     <img src="/assets/img/portfolio/lopo.png" alt="portfolio" />
                                 </div>
-                                 <div className="portfolio-details">
+                                <div className="portfolio-details">
                                     <p>Couples + Engagement</p>
-                                    <h3><a href="project-details.html">Together Forever Session</a></h3>
+                                    <h3><a href="#">Together Forever Session</a></h3>
                                 </div>
                             </div>
                         </div>
-                   
-                 
+
+
                     </div>
                 </div>
             </div>
@@ -322,11 +325,11 @@ export default function Home() {
             {/* ==============================
     Gallery Area
     ============================== */}
-            <div className="gallery-area-1 space overflow-hidden">
+            <div className="gallery-area-1 space overflow-hidden" id="gallery">
                 <div className="container">
                     <div className="title-area text-center title-anim">
-                        <span className="sub-title style2">PRESERVE YOUR MEMORIES</span>
-                        <h2 className="sec-title">Keepsakes & Prints</h2>
+                        <span className="sub-title style2">MOMENTS CAPTURED</span>
+                        <h2 className="sec-title">Through Our Lens</h2>
                     </div>
                     <GallerySlider />
                 </div>
@@ -335,8 +338,8 @@ export default function Home() {
             {/* ==============================
         Contact Areadddfsf
     ============================== */}
-    
-            <div className="contact-area-1 space overflow-hidden" data-bg-src="/assets/img/bg/contact-1-bg.png">
+
+            <div className="contact-area-1 space overflow-hidden" id="inquiry" data-bg-src="/assets/img/bg/contact-1-bg.png">
                 <div className="contact-shape1_1 shape-mockup jump d-lg-block d-none" data-top="0%" data-right="-8%">
                     <img src="/assets/img/normal/contact-shape_1-1.png" alt="img" />
                 </div>
@@ -350,51 +353,9 @@ export default function Home() {
                             </span>
                             <h2 className="sec-title text-white">LETS CREATE MAGIC</h2>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <form action="https://tfhtml.themepul.com/ovation/demo/mail.php" method="POST"
-                                    className="contact-form ajax-contact">
-                                    <div className="row">
-                                        <div className="col-lg-6">
-                                            <div className="form-group form-icon-left">
-                                                <i className="far fa-user"></i>
-                                                <input type="text" className="form-control style-border" name="name" id="name"
-                                                    placeholder="Enter full name" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="form-group form-icon-left">
-                                                <i className="far fa-envelope"></i>
-                                                <input type="text" className="form-control style-border" name="email" id="email"
-                                                    placeholder="Enter email address" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <div className="form-group form-icon-left">
-                                                <i className="far fa-calendar"></i>
-                                                <input type="date" className="form-control style-border" name="date" id="date" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <div className="form-group form-icon-left">
-                                                <i className="far fa-calendar"></i>
-                                                <input type="text" className="form-control style-border" name="number" id="number"
-                                                    placeholder="Number of guest" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <div className="form-group form-icon-left">
-                                                <i className="far fa-calendar"></i>
-                                                <input type="text" className="form-control style-border" name="message" id="meal"
-                                                    placeholder="Meal preference" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="form-btn col-12 text-center">
-                                        <button type="submit" className="btn">MAKE RESERVATION</button>
-                                    </div>
-                                </form>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-8">
+                                <InquiryForm />
                             </div>
                         </div>
                     </div>
@@ -499,7 +460,60 @@ export default function Home() {
             {/* ==============================
     Blog Area
     ============================== */}
-        
+
+
+
+
+            {/* ==============================
+    Contact Info Area
+    ============================== */}
+            <div className="contact-area space" id="contact" data-bg-src="/assets/img/bg/contact-page-bg.html" style={{ marginTop: '-70px' }}>
+                <div className="container">
+                    <div className="row gy-4 justify-content-center">
+                        <div className="col-lg-4 col-md-6">
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fas fa-map-marker-alt" style={{ fontSize: '48px', color: 'var(--theme-color)' }}></i>
+                                </div>
+                                <div className="contact-details">
+                                    <h4 className="title">Office Address</h4>
+                                    <span>Based in</span>
+                                    <p>Houston, Texas</p>
+                                    <p>Available for travel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fas fa-envelope" style={{ fontSize: '48px', color: 'var(--theme-color)' }}></i>
+                                </div>
+                                <div className="contact-details">
+                                    <h4 className="title">Email Address</h4>
+                                    <span>24/7 Anytime</span>
+                                    <p>info@imagerybyb.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fas fa-phone-alt" style={{ fontSize: '48px', color: 'var(--theme-color)' }}></i>
+                                </div>
+                                <div className="contact-details">
+                                    <h4 className="title">Phone Number</h4>
+                                    <span>24/7 Anytime</span>
+                                    <p>+1 (346) 243-2684</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* ==============================
+    Contact Form with Map
+    ============================== */}
 
         </>
     );
