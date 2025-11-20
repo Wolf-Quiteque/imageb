@@ -333,7 +333,7 @@ export default function Home() {
             </div>
 
             {/* ==============================
-        Contact Area
+        Contact Areadddfsf
     ============================== */}
     
             <div className="contact-area-1 space overflow-hidden" data-bg-src="/assets/img/bg/contact-1-bg.png">
