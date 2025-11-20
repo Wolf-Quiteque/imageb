@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import VideoModal from "./components/VideoModal";
 import GallerySlider from "./components/GallerySlider";
 import InquiryForm from "./components/InquiryForm";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
     return (
@@ -11,70 +12,7 @@ export default function Home() {
             {/* ==============================
     Hero Area
     ============================== */}
-            <div className="hero-wrapper hero-1" id="hero">
-                <div className="global-carousel" id="heroSlider1" data-fade="true" data-slide-show="1" data-lg-slide-show="1"
-                    data-md-slide-show="1" data-sm-slide-show="1" data-xs-slide-show="1" data-arrows="false" data-autoplay-speed="3000" data-infinite="true">
-                    <div className="hero-slider" data-bg-src="/assets/img/hero/hero_bg_1_1.png">
-                        <div className="hero-shape1_1 shape-mockup movingX" data-bottom="0" data-left="0">
-                            <img src="/assets/img/hero/hero_shape_1_1.png" alt="img" />
-                        </div>
-                        <div className="hero-shape1_2 shape-mockup movingX" data-top="-25%" data-right="35%">
-                            <img src="/assets/img/hero/hero_shape_1_2.png" alt="img" />
-                        </div>
-                        <div className="container">
-                            <div className="row flex-row-reverse">
-
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="hero-style1">
-                                        <span className="hero-subtitle d-none d-md-block" data-ani="slideindown" data-ani-delay="0.5s">Your Love Story Deserves</span>
-                                        <span className="hero-subtitle2 d-none d-md-block" data-ani="slideindown" data-ani-delay="0.4s">Every stolen glance, every joyful tear, every promise whispered.</span>
-                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">WEDDING DAY</h1>
-                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">MAGIC</h1>
-                                        <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="#" className="btn style2">BOOK YOUR DATE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 align-self-end">
-                                    <div className="hero-thumb1" data-ani="slideinleft" data-ani-delay="0.1s">
-                                        <img src="/assets/img/hero/hero_1_1.png" alt="img" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hero-slider" data-bg-src="/assets/img/hero/hero_bg_1_1.png">
-                        <div className="hero-shape1_1 shape-mockup movingX" data-bottom="0" data-left="0">
-                            <img src="/assets/img/hero/hero_shape_1_1.png" alt="img" />
-                        </div>
-                        <div className="hero-shape1_2 shape-mockup movingX" data-top="-25%" data-right="35%">
-                            <img src="/assets/img/hero/hero_shape_1_2.png" alt="img" />
-                        </div>
-                        <div className="container">
-                            <div className="row flex-row-reverse">
-
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="hero-style1">
-                                        <span className="hero-subtitle d-none d-md-block" data-ani="slideindown" data-ani-delay="0.5s">Celebrate Your Forever</span>
-                                        <span className="hero-subtitle2 d-none d-md-block" data-ani="slideindown" data-ani-delay="0.4s">The way you laugh together, hold each other, love each other—captured beautifully.</span>
-                                        <h1 className="hero-title" data-ani="slideindown" data-ani-delay="0.1s">TOGETHER FOREVER</h1>
-                                        <h1 className="hero-title" data-ani="slideinup" data-ani-delay="0.1s">SESSIONS</h1>
-                                        <div className="btn-group" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <a href="#" className="btn style2">START YOUR STORY</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 align-self-end">
-                                    <div className="hero-thumb1" data-ani="slideinleft" data-ani-delay="0.1s">
-                                        <img src="/assets/img/hero/hero_1_2.png" alt="img" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <HeroSection />
             {/* ======== / Hero Section ======== */}
 
             {/* ==============================
